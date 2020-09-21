@@ -1,13 +1,17 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // const publicPath = path.join(__dirname, '..', 'client/build');
 
 // app.use(express.static(publicPath));
 
 app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('/test', (req, res)=>{
+  res.send('SERVER HIT!')
+})
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(publicPath, 'index.html'));
