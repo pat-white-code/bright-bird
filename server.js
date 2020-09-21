@@ -13,9 +13,9 @@ app.get('/test', (req, res)=>{
   res.send('SERVER HIT!')
 })
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(publicPath, 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 
 app.listen(port, () => {
